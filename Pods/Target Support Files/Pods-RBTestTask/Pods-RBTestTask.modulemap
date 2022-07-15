@@ -1,0 +1,6 @@
+framework module Pods_RBTestTask {
+  umbrella header "Pods-RBTestTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

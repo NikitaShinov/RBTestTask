@@ -39,6 +39,7 @@
 		502A2C1B288060C6003ADF8A /* BookmakerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakerInfoView.swift; sourceTree = "<group>"; };
 		502A2C1D288060CF003ADF8A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		502A2C1F2880D23D003ADF8A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		502A2C28288186CD003ADF8A /* LiveCodingTask.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LiveCodingTask.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EE0B08A8D382EA15F019CF93 /* Pods-RBTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBTestTask.release.xcconfig"; path = "Target Support Files/Pods-RBTestTask/Pods-RBTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +58,7 @@
 		502A2BE7287E0883003ADF8A = {
 			isa = PBXGroup;
 			children = (
+				502A2C28288186CD003ADF8A /* LiveCodingTask.playground */,
 				502A2BF2287E0883003ADF8A /* RBTestTask */,
 				502A2BF1287E0883003ADF8A /* Products */,
 				B8FE3B5AC8D6B3210B964605 /* Pods */,

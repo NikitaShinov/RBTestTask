@@ -10,19 +10,12 @@ import SnapKit
 
 class BookmakerInfoView: UIView {
     
+    //MARK: - Properties
+    
     var winTotal: Int!
     var loseTotal: Int!
     var drawTotal: Int!
     var allTotal: Int!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }    
     
     lazy var bookmakerImage: UIImageView = {
         let image = UIImageView()
@@ -31,7 +24,7 @@ class BookmakerInfoView: UIView {
     
     lazy var betsAmount: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 13)
+        label.font = .boldSystemFont(ofSize: 16)
         return label
     }()
     
@@ -71,6 +64,19 @@ class BookmakerInfoView: UIView {
         return label
     }()
     
+    //MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubviews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Private methods
+    
     private func addSubviews() {
         let subviews = [bookmakerImage,
                         betsAmount,
@@ -86,20 +92,22 @@ class BookmakerInfoView: UIView {
         }
     }
     
+    //MARK: - layoutSubviews
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         let fullStatWidth = UIScreen.main.bounds.width - 30
         
         bookmakerImage.snp.makeConstraints { make in
-            make.top.equalTo(10)
+            make.top.equalToSuperview()
             make.width.equalTo(fullStatWidth / 2)
             make.height.equalTo(fullStatWidth / 4)
             make.left.equalTo(5)
         }
         
         betsAmount.snp.makeConstraints { make in
-            make.top.equalTo(30)
+            make.top.equalTo(bookmakerImage.snp.top).offset(40)
             make.left.equalTo(bookmakerImage.snp.right).offset(10)
             make.width.equalTo(fullStatWidth / 3)
             make.height.equalTo(20)

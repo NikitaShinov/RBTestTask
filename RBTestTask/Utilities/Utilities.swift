@@ -9,6 +9,8 @@ import UIKit
 
 final class Utilities {
     
+    //MARK: - Configure Data
+    
     static func createData() -> [Bookmaker] {
         
         let bookmakerOne = Bookmaker(bookmakerImage: UIImage(named: "365")!, totalBets: 32, winBets: 20, lossBets: 7, drawBets: 5)

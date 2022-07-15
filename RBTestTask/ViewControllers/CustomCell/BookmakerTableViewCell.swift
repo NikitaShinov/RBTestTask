@@ -14,6 +14,8 @@ class BookmakerTableViewCell: UITableViewCell {
     
     private var viewModel: BookmakerTableViewCellViewModelProtocol!
     
+    //MARK: - Init
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         viewModel = BookmakerTableViewCellViewModel()
@@ -25,9 +27,11 @@ class BookmakerTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Properties
+    
     private lazy var headLineLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 16)
         label.text = "Выигрыши/проигрыши по букмекерам"
         return label
     }()
@@ -48,6 +52,7 @@ class BookmakerTableViewCell: UITableViewCell {
         return view
     }()
     
+    //MARK: - Private methods
     
     private func addSubviews() {
         let subviews = [headLineLabel, firstBookInfo, divider, secondBookInfo]
@@ -62,6 +67,8 @@ class BookmakerTableViewCell: UITableViewCell {
         viewModel.configureView(of: 1, for: secondBookInfo)
     }
     
+    //MARK: - layoutSubviews
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -73,14 +80,14 @@ class BookmakerTableViewCell: UITableViewCell {
         }
         
         firstBookInfo.snp.makeConstraints { make in
-            make.top.equalTo(headLineLabel).offset(30)
+            make.top.equalTo(headLineLabel.snp.bottom).offset(5)
             make.left.equalTo(5)
             make.width.equalTo(fullStatWidth)
             make.height.equalTo(100)
         }
         
         divider.snp.makeConstraints { make in
-            make.top.equalTo(firstBookInfo.snp.bottom).offset(30)
+            make.top.equalTo(firstBookInfo.snp.bottom).offset(50)
             make.left.equalToSuperview()
             make.width.equalTo(contentView.frame.size.width)
             make.height.equalTo(1)

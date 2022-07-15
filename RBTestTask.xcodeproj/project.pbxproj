@@ -75,21 +75,77 @@
 		502A2BF2287E0883003ADF8A /* RBTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				502A2BF3287E0883003ADF8A /* AppDelegate.swift */,
-				502A2BF5287E0883003ADF8A /* SceneDelegate.swift */,
-				502A2C112880606E003ADF8A /* Bookmaker.swift */,
-				502A2C132880607B003ADF8A /* BookmakerTableViewCell.swift */,
-				502A2C1528806093003ADF8A /* BookmakerTableViewCellViewModel.swift */,
-				502A2C17288060A2003ADF8A /* BookmakerViewModel.swift */,
-				502A2C19288060B9003ADF8A /* BookmakerViewController.swift */,
-				502A2C1B288060C6003ADF8A /* BookmakerInfoView.swift */,
-				502A2C1D288060CF003ADF8A /* Utilities.swift */,
-				502A2C1F2880D23D003ADF8A /* Extensions.swift */,
+				502A2C2128817EA9003ADF8A /* Root */,
+				502A2C2228817EB3003ADF8A /* Model */,
+				502A2C2328817EBE003ADF8A /* ViewModel */,
+				502A2C2428817ED3003ADF8A /* ViewControllers */,
+				502A2C2728817F5B003ADF8A /* Utilities */,
 				502A2BFC287E0887003ADF8A /* Assets.xcassets */,
 				502A2BFE287E0887003ADF8A /* LaunchScreen.storyboard */,
 				502A2C01287E0887003ADF8A /* Info.plist */,
 			);
 			path = RBTestTask;
+			sourceTree = "<group>";
+		};
+		502A2C2128817EA9003ADF8A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				502A2BF3287E0883003ADF8A /* AppDelegate.swift */,
+				502A2BF5287E0883003ADF8A /* SceneDelegate.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		502A2C2228817EB3003ADF8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				502A2C112880606E003ADF8A /* Bookmaker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		502A2C2328817EBE003ADF8A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				502A2C17288060A2003ADF8A /* BookmakerViewModel.swift */,
+				502A2C1528806093003ADF8A /* BookmakerTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		502A2C2428817ED3003ADF8A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				502A2C19288060B9003ADF8A /* BookmakerViewController.swift */,
+				502A2C2628817EFE003ADF8A /* CustomView */,
+				502A2C2528817EEB003ADF8A /* CustomCell */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		502A2C2528817EEB003ADF8A /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				502A2C132880607B003ADF8A /* BookmakerTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		502A2C2628817EFE003ADF8A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				502A2C1B288060C6003ADF8A /* BookmakerInfoView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		502A2C2728817F5B003ADF8A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				502A2C1F2880D23D003ADF8A /* Extensions.swift */,
+				502A2C1D288060CF003ADF8A /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B8FE3B5AC8D6B3210B964605 /* Pods */ = {

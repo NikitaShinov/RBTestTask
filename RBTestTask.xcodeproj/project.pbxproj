@@ -19,6 +19,7 @@
 		502A2C1A288060B9003ADF8A /* BookmakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A2C19288060B9003ADF8A /* BookmakerViewController.swift */; };
 		502A2C1C288060C6003ADF8A /* BookmakerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A2C1B288060C6003ADF8A /* BookmakerInfoView.swift */; };
 		502A2C1E288060CF003ADF8A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A2C1D288060CF003ADF8A /* Utilities.swift */; };
+		502A2C202880D23D003ADF8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A2C1F2880D23D003ADF8A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		502A2C19288060B9003ADF8A /* BookmakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakerViewController.swift; sourceTree = "<group>"; };
 		502A2C1B288060C6003ADF8A /* BookmakerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakerInfoView.swift; sourceTree = "<group>"; };
 		502A2C1D288060CF003ADF8A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		502A2C1F2880D23D003ADF8A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EE0B08A8D382EA15F019CF93 /* Pods-RBTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBTestTask.release.xcconfig"; path = "Target Support Files/Pods-RBTestTask/Pods-RBTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				502A2C19288060B9003ADF8A /* BookmakerViewController.swift */,
 				502A2C1B288060C6003ADF8A /* BookmakerInfoView.swift */,
 				502A2C1D288060CF003ADF8A /* Utilities.swift */,
+				502A2C1F2880D23D003ADF8A /* Extensions.swift */,
 				502A2BFC287E0887003ADF8A /* Assets.xcassets */,
 				502A2BFE287E0887003ADF8A /* LaunchScreen.storyboard */,
 				502A2C01287E0887003ADF8A /* Info.plist */,
@@ -225,6 +228,7 @@
 				502A2C18288060A2003ADF8A /* BookmakerViewModel.swift in Sources */,
 				502A2C142880607B003ADF8A /* BookmakerTableViewCell.swift in Sources */,
 				502A2C1C288060C6003ADF8A /* BookmakerInfoView.swift in Sources */,
+				502A2C202880D23D003ADF8A /* Extensions.swift in Sources */,
 				502A2C1A288060B9003ADF8A /* BookmakerViewController.swift in Sources */,
 				502A2C1E288060CF003ADF8A /* Utilities.swift in Sources */,
 				502A2BF6287E0883003ADF8A /* SceneDelegate.swift in Sources */,

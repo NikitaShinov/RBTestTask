@@ -16,6 +16,7 @@ class BookmakerTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        viewModel = BookmakerTableViewCellViewModel()
         addSubviews()
         configureViews()
     }
@@ -30,7 +31,7 @@ class BookmakerTableViewCell: UITableViewCell {
         label.text = "Выигрыши/проигрыши по букмекерам"
         return label
     }()
-    
+
     private lazy var firstBookInfo: BookmakerInfoView = {
         let view = BookmakerInfoView()
         return view
@@ -57,7 +58,6 @@ class BookmakerTableViewCell: UITableViewCell {
     }
     
     private func configureViews() {
-        viewModel = BookmakerTableViewCellViewModel()
         viewModel.configureView(of: 0, for: firstBookInfo)
         viewModel.configureView(of: 1, for: secondBookInfo)
     }

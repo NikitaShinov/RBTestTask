@@ -22,10 +22,16 @@ class BookmakerTableViewCellViewModel: BookmakerTableViewCellViewModelProtocol {
     func configureView(of index: Int, for bookmakerInfo: BookmakerInfoView) {
         viewModel.bookmakers.subscribe(onNext: { bookmaker in
             bookmakerInfo.bookmakerImage.image = bookmaker[index].bookmakerImage
-            bookmakerInfo.betsAmount.text = "\(bookmaker[index].totalBets)"
-            bookmakerInfo.winStat.text = "\(bookmaker[index].winBets)"
-            bookmakerInfo.lossStat.text = "\(bookmaker[index].lossBets)"
-            bookmakerInfo.drawStat.text = "\(bookmaker[index].drawBets)"
+            bookmakerInfo.betsAmount.text = "\(bookmaker[index].totalBets.endingReturn())"
+            bookmakerInfo.winStat.text = "\(bookmaker[index].winBets) (\(bookmaker[index].winPercentage)%)"
+            bookmakerInfo.lossStat.text = "\(bookmaker[index].lossBets) (\(bookmaker[index].lossPercentage)%)"
+            bookmakerInfo.drawStat.text = "\(bookmaker[index].drawBets) (\(bookmaker[index].drawPercentage)%)"
+            bookmakerInfo.winTotal = bookmaker[index].winBets
+            bookmakerInfo.loseTotal = bookmaker[index].lossBets
+            bookmakerInfo.drawTotal = bookmaker[index].drawBets
+            bookmakerInfo.allTotal = bookmaker[index].totalBets
         }).disposed(by: disposeBag)
+        
     }
+    
 }

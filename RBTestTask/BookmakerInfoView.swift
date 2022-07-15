@@ -10,6 +10,11 @@ import SnapKit
 
 class BookmakerInfoView: UIView {
     
+    var winTotal: Int!
+    var loseTotal: Int!
+    var drawTotal: Int!
+    var allTotal: Int!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
@@ -17,12 +22,10 @@ class BookmakerInfoView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
+    }    
     
     lazy var bookmakerImage: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .systemGray
         return image
     }()
     
@@ -88,8 +91,6 @@ class BookmakerInfoView: UIView {
         
         let fullStatWidth = UIScreen.main.bounds.width - 30
         
-        backgroundColor = .green
-        
         bookmakerImage.snp.makeConstraints { make in
             make.top.equalTo(10)
             make.width.equalTo(fullStatWidth / 2)
@@ -105,21 +106,21 @@ class BookmakerInfoView: UIView {
         }
         
         winRate.snp.makeConstraints { make in
-            make.width.equalTo(fullStatWidth * (16 / 32))
+            make.width.equalTo(fullStatWidth * CGFloat(Double(winTotal) / Double(allTotal)))
             make.top.equalTo(bookmakerImage.snp.bottom).offset(5)
             make.height.equalTo(10)
             make.left.equalTo(5)
         }
         
         lossRate.snp.makeConstraints { make in
-            make.width.equalTo(fullStatWidth * (10 / 32))
+            make.width.equalTo(fullStatWidth * CGFloat(Double(loseTotal) / Double(allTotal)))
             make.top.equalTo(bookmakerImage.snp.bottom).offset(5)
             make.height.equalTo(10)
             make.left.equalTo(winRate.snp.right).offset(5)
         }
         
         drawRate.snp.makeConstraints { make in
-            make.width.equalTo(fullStatWidth * (6 / 32))
+            make.width.equalTo(fullStatWidth * CGFloat(Double(drawTotal) / Double(allTotal)))
             make.top.equalTo(bookmakerImage.snp.bottom).offset(5)
             make.height.equalTo(10)
             make.left.equalTo(lossRate.snp.right).offset(5)

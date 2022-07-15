@@ -16,13 +16,13 @@ struct Bookmaker {
     let lossBets: Int
     let drawBets: Int
     var winPercentage: Int {
-        totalBets / winBets
+        winBets * 100 / totalBets
     }
     var lossPercentage: Int {
-        totalBets / lossBets
+        lossBets * 100 / totalBets
     }
     var drawPercentage: Int {
-        totalBets / drawBets
+        drawBets * 100 / totalBets
     }
     
     init

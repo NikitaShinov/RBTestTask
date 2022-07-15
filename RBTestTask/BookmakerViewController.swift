@@ -17,14 +17,15 @@ class BookmakerViewController: UITableViewController {
         view.backgroundColor = .blue
         
         tableView.register(BookmakerTableViewCell.self, forCellReuseIdentifier: BookmakerTableViewCell.identifier)
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        300
+        330
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
